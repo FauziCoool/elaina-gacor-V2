@@ -1,5 +1,5 @@
 var COINS = 100
-var MYTHRILL = 20
+var MYTHRILL = 0
 
 var MYTHRILL_UI = document.getElementById('mythrill')
 

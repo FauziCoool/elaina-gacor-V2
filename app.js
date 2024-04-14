@@ -84,11 +84,11 @@ function Buy(nameItem) {
     if (MYTHRILL >= HARGA) {
         MYTHRILL -= HARGA;
         COINS += ITEMS;
-        document.getElementById('coins').innerHTML = ':'+COINS
+        document.getElementById('coins').innerHTML = ': '+COINS
         MYTHRILL_UI.innerHTML = MYTHRILL
         console.log(MYTHRILL)
     } else {
         console.log('mythrill tidak cukup');
     }
-    MYTHRILL;
+    MYTHRILL_UI;
 }

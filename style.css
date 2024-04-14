@@ -97,6 +97,11 @@ body {
     image-rendering: pixelated;
 }
 
+.note {
+    margin: 10px;
+    font-size: 8px;
+}
+
 .shop {
     padding: 5px;
     position: relative;
@@ -128,8 +133,9 @@ body {
     margin-left: -65px;
     width: 180px;
     height: 64px;
-    background-color: azure;
+    background-color: white;
     border-radius: 5px;
+    border: 2px solid darkblue;
 
     display: flex;
     justify-content: space-between;
@@ -143,8 +149,10 @@ body {
 }
 
 .item-shop button {
+    color: black;
     margin-left: 5px;
     margin-right: 5px;
+    font-family: 'Pixelate', sans-serif;
 }
 
 .btn-shop {

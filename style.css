@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Pixelate";
+    src: url('Assets/Font/rainyhearts.ttf');
+}
+
+.container-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 700px;
+    height: 500px;
+
+}
+
+.main {
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 320px;
+    height: 320px;
+    background-image: url('Assets/Bg-Spin.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.ui-item {
+    padding: 3px;
+    margin-left: 75px;
+    width: 160px;
+    height: 45px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ui-item .item {
+    display: flex;
+    align-items: center;
+}
+
+.ui-item .item p {
+    margin-left: 1px;
+    font-size: 15px;
+    font-family: 'Pixelate', sans-serif;
+}
+
+.wheel {
+    width: 128px;
+    height: 128px;
+
+    margin-left: 95px;
+    margin-top: 45px;
+    background-image: url('Assets/Wheel-Spin.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-rendering: pixelated;
+    animation: spin .3s infinite linear;
+}
+
+.spin {
+    transform: rotate(360deg);
+}
+
+.code {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-family: 'Pixelate';
+}
+
+.spin-btn {
+
+    margin-left: 95px;
+    margin-top: 15px;
+    width: 128px;
+    height: 64px;
+    background-image: url('Assets/Spin-Btn.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-rendering: pixelated;
+}
+
+.shop {
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    left: 75%;
+
+    z-index:   -1;
+    margin-top: -130px;
+    margin-left: -275px;
+    width: 260px;
+    height: 260px;
+    background-image: url('Assets/Bg-Spin.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-rendering: pixelated;
+    animation: slide .3s infinite linear;
+}
+
+.slide {
+    transform: translateX(200px);
+}
+
+.item-shop {
+    position: relative;
+    top: 5%;
+    left: 50%;
+
+    margin-top: 10px;
+    margin-left: -65px;
+    width: 180px;
+    height: 64px;
+    background-color: azure;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-shop p {
+    margin-left: 5px;
+    font-size: 10px;
+    font-family: 'Pixelate', sans-serif;
+}
+
+.item-shop button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn-shop {
+    position: absolute;
+    top: 50%;
+    left: 102%;
+
+    margin-top: -24px;
+
+    width: 64px;
+    height: 64px;
+    background-image: url('Assets/Shop-Btn.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    image-rendering: pixelated;
+}

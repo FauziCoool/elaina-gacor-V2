@@ -1,11 +1,36 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Pixelate';
 }
 
 @font-face {
     font-family: "Pixelate";
     src: url('Assets/Font/rainyhearts.ttf');
+}
+
+
+#PopUp {
+    width: 180px;
+    height: 40px;
+
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: lightslategray;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#PopUp h3 {
+    font-size: 15px;
 }
 
 .container-game {
@@ -42,6 +67,7 @@ body {
     width: 160px;
     height: 45px;
     background-color: gainsboro;
+    border: 1px solid black;
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
@@ -83,6 +109,7 @@ body {
     transform: translate(-50%, -50%);
     font-size: 40px;
     font-family: 'Pixelate';
+    display: none;
 }
 
 .spin-btn {

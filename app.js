@@ -2,13 +2,26 @@ var COINS = 100
 var MYTHRILL = 0
 
 var MYTHRILL_UI = document.getElementById('mythrill')
+var POPUP_UI = document.getElementById('PopUp')
+var POPUP_TEXT = document.getElementById('PopUp-Text')
 
 //Start Langsung ke add
-function addCoins() {
+function Started() {
     document.getElementById('coins').innerHTML = ': '+COINS
     document.getElementById('mythrill').innerHTML = ': '+MYTHRILL
 }
-addCoins()
+Started()
+
+function PopUp() {
+    POPUP_UI.style.display = 'none'
+}
+PopUp()
+
+function PopUpExit() {
+    setTimeout(function () {
+        POPUP_UI.style.display = 'none'
+    }, 4000)
+}
 
 function CheckCoins() {
     if (COINS == 0){
@@ -43,25 +56,39 @@ function spinLucky() {
 
     if (data > 1000 && data < 1200) {
         COINS += 1
+        POPUP_TEXT.innerHTML = "You Small Win 1+"
+        POPUP_UI.style.display = 'flex'
+        PopUpExit()
     }
 
     if (data > 1300 && data < 1500) {
         COINS += 30
+        POPUP_TEXT.innerHTML = "You Big Win 30+"
+        POPUP_UI.style.display = 'flex'
+        PopUpExit()
     } else {
         if (data > 2100 && data < 3000) {
             COINS += 50
+            POPUP_TEXT.innerHTML = "You Super Win 50+"
+            POPUP_UI.style.display = 'flex'
+            PopUpExit()
         }
     }
 
     if (COINS < 400) {
-        if (data > 1 && data < 10) {
+        if (data > 1 && data < 100) {
             COINS += 500
+            POPUP_TEXT.innerHTML = "You Win Jacpot 500+"
+            POPUP_UI.style.display = 'flex'
+            PopUpExit()
         }
     }
 
     //Bagian Menambahkan Mythrill
     if (data > 1600 && data < 2000) {
         MYTHRILL += 1
+        POPUP_TEXT.innerHTML = "You Win Mythrill 1+"
+        PopUpExit()
     }
 }
 

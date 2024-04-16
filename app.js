@@ -1,14 +1,16 @@
 var COINS = 100
 var MYTHRILL = 0
 
-var MYTHRILL_UI = document.getElementById('mythrill')
+var COINS_UI = document.getElementById('coins')
+var MYTHRILL_UI = document.getElementById('mythrills')
+
 var POPUP_UI = document.getElementById('PopUp')
 var POPUP_TEXT = document.getElementById('PopUp-Text')
 
 //Start Langsung ke add
 function Started() {
-    document.getElementById('coins').innerHTML = ': '+COINS
-    document.getElementById('mythrill').innerHTML = ': '+MYTHRILL
+    COINS_UI.innerHTML = ': '+COINS
+    MYTHRILL_UI.innerHTML = ': '+MYTHRILL
 }
 Started()
 
@@ -33,7 +35,8 @@ function CheckCoins() {
 CheckCoins()
 
 function spin() {
-    document.getElementById('coins').innerHTML = ': '+COINS
+    COINS_UI.innerHTML = ': '+COINS
+    MYTHRILL_UI.innerHTML = ': '+MYTHRILL
     var wheel = document.getElementById('wheel')
     var rotationTime = Math.random() * 2 + 2
     var btn_spin = document.getElementById('btn-spin')
@@ -88,6 +91,8 @@ function spinLucky() {
     if (data > 1600 && data < 2000) {
         MYTHRILL += 1
         POPUP_TEXT.innerHTML = "You Win Mythrill 1+"
+        MYTHRILL_UI.innerHTML = ": "+MYTHRILL
+        POPUP_UI.style.display = 'flex'
         PopUpExit()
     }
 }

@@ -94,7 +94,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     image-rendering: pixelated;
-    animation: spin .3s infinite linear;
+    animation: spin .5s linear;
 }
 
 .spin {

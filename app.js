@@ -97,12 +97,16 @@ function spinLucky() {
     }
 }
 
+
+//UI Shop
 function Ui_shop() {
     var shop = document.getElementById('shop')
     shop.style.transitionDuration = .7 + 's'
     shop.classList.toggle('slide')
 }
 
+
+//System Buy
 function Buy(nameItem) {
     var HARGA;
     var ITEMS;
